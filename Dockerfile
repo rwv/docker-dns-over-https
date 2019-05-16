@@ -14,3 +14,6 @@ FROM alpine
 
 COPY --from=builder /dns-over-https/doh-server/doh-server /doh-server
 COPY --from=builder /dns-over-https/doh-client/doh-client /doh-client
+
+COPY ./doh-server.conf /doh-server.conf
+COPY ./doh-client.conf /doh-client.conf
